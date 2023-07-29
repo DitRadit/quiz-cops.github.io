@@ -77,6 +77,42 @@
     .card:hover {
       transform: scale(1.05);
     }
+    @keyframes spin_01{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+.effect-wrap .effect{
+    position: absolute;
+    z-index: -1;
+}
+
+.effect-wrap .effect-1{
+    left: 20%;
+    top: 20%;
+    font-size: 40px;
+    color: #00DDB5;
+    animation: spin_01 5s linear infinite;
+}
+.effect-wrap .effect-2{
+    right: 34%;
+    top: 14%;
+    font-size: 40px;
+    color: #FFC41D;
+    animation: spin_01 7s linear infinite;
+}
+.effect-wrap .effect-3{
+    left: 40%;
+    bottom: 10%;
+    font-size: 40px;
+    color: #E44C10;
+    animation: spin_01 3s linear infinite;
+}
 
   </style>
   </head>
@@ -133,6 +169,11 @@
     <main >
     <!-- hero section -->
     <section class="pt-20" data-aos="fade-up" id="hero">
+      <div class="effect-wrap">
+        <i class="fas fa-plus effect effect-1"></i>
+        <i class="fas fa-plus effect effect-2"></i>
+        <i class="fas fa-plus effect effect-3"></i>
+      </div>
         <div class="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
             <div class="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left" style="max-width: 40rem;">
                 <h1 class="text-4xl font-bold sm:text-6xl">Quiz <span class="text-[#3333CB]">Cops</span> : Catch the <span class="text-[#E44C10]">Robber</span>!
@@ -144,6 +185,7 @@
                     <button style="text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);" class="bg-[#3333CB] text-white px-8 py-4 rounded-2xl font-bold text-2xl transition hover:bg-[#00DDB5] hover:text-white">
                       PLAY
                     </button>
+                  </a>
                 </div>
             </div>
             <div class="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128" >
@@ -193,8 +235,7 @@
   </div>
   </section>
   <br>
-  <br>
-  <br>
+
   <!-- card section end -->
 
 
