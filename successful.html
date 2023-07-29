@@ -77,6 +77,41 @@
     .card:hover {
       transform: scale(1.05);
     }
+    @keyframes spin_01{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+    .effect-wrap .effect{
+    position: absolute;
+    z-index: -1;
+}
+
+.effect-wrap .effect-1{
+    left: 20%;
+    top: 20%;
+    font-size: 50px;
+    color: #00DDB5;
+    animation: spin_01 5s linear infinite;
+}
+.effect-wrap .effect-2{
+    right: 27%;
+    top: 14%;
+    font-size: 50px;
+    color: #FFC41D;
+    animation: spin_01 7s linear infinite;
+}
+.effect-wrap .effect-3{
+    left: 40%;
+    bottom: 10%;
+    font-size: 50px;
+    color: #E44C10;
+    animation: spin_01 3s linear infinite;
+}
 
   </style>
   </head>
@@ -135,6 +170,11 @@
 
     <main >
         <section data-aos="fade-up">
+          <div class="effect-wrap">
+            <i class="fas fa-plus effect effect-1"></i>
+            <i class="fas fa-plus effect effect-2"></i>
+            <i class="fas fa-plus effect effect-3"></i>
+          </div>
             <div class=" flex items-center justify-center h-screen">
                 <div class="relative">
                     <div class="bg-white p-24 rounded-lg shadow-lg max-w-7xl">
